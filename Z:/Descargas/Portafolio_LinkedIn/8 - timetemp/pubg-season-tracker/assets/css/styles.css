@@ -1,0 +1,37 @@
+/*
+ * Archivo: styles.css
+ * DescripciÃ³n: Estilos personalizados con la identidad de marca de PUBG.
+ */
+:root {
+  /* Paleta de Colores de PUBG */
+  --pubg-bg-dark: #111111;    /* Un negro/gris muy oscuro */
+  --pubg-bg-light: #2a2a2a;   /* Un gris carbÃ³n para paneles */
+  --pubg-yellow: #f9b233;     /* El amarillo/oro icÃ³nico de PUBG */
+  --pubg-text-light: #e0dccb; /* Un blanco-beige (color tan) */
+  --pubg-text-dark: #111111;    /* Texto oscuro para botones amarillos */
+  --pubg-red-alert: #d93a3a;   /* Rojo para alertas o "LIVE" */
+}
+
+body {
+  /* Fuente base (utilitaria) */
+  font-family: 'Roboto Condensed', sans-serif;
+  /* Fondo oscuro con textura "gritty" (ruido) */
+  background-color: var(--pubg-bg-dark);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.03"/></svg>');
+}
+
+/* Clases de utilidad para fuentes (que usaremos en Tailwind) */
+.font-heading {
+  font-family: 'Teko', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; /* Fuentes de tÃ­tulo siempre en mayÃºsculas */
+}
+
+.font-body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* --- Interruptor Maestro para Anuncios (LÃ³gica de la v. anterior) --- */
+.ads-hidden .ad-container {
+  display: none !important;
+}
